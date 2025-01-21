@@ -1,0 +1,37 @@
+body {
+    background-image: url(img/img_login.jpg);
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover; /* Cubre todo el elemento de lo que hayas puesto*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#base-login {
+    background-color: rgba(207, 206, 206, 0.88);
+    width: 35%; 
+    height: 450px;
+    border-radius: 20px;
+}
+
+#base-logo {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    width: 80%;
+}
+
+#login-formulario {
+    display: flex;
+    text-align: center;
+}
+
