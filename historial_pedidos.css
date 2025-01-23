@@ -1,23 +1,19 @@
 body{
     font-family: Arial, sans-serif;
-      margin: 0;
-            padding: 0;
-
+    margin: 0;
+    padding: 0;
 }
 
 .usuario{
-
-display:flex;
-align-items:center;
-gap: 15px;
-margin-right: 20px;
-
+    display:flex;
+    align-items:center;
+    gap: 15px;
+    margin-right: 20px;
 }
 
 .usuario img{
     height: 50px;
     margin-left: 10px;
-   
 }
 
 .encabezado{
@@ -28,12 +24,12 @@ margin-right: 20px;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-
 }
 
 .encabezado h2{
     margin:0;
 }
+
 header{
     display: flex;
     align-items: center;
@@ -44,13 +40,10 @@ header{
 }
 
 nav{
-   
     display: flex;
-            gap: 70px; 
-            margin-left: 60px;
-            align-items: center;
-           
-
+    gap: 70px; 
+    margin-left: 60px;
+    align-items: center;
 }
 nav a {
     color: black;
@@ -61,34 +54,27 @@ nav a {
 nav a:hover{
     color: blue;
 }
-.logo{
 
+.logo{
     margin-left: auto;
     width: 20%;
-    
-
-    
 }
-.logo img{
 
+.logo img{
     height:auto;
     margin-left: 10px;
     width: 150%;
-
 }
+
 h1 {
     text-align: center;
     margin-top: 20px;
-  
 }
 
 table {
     width: 90%;
-    
     margin: 20px auto;
     border-collapse: collapse;
-   
-   
 }
 thead{
     background-color: rgb(148, 123, 176);
