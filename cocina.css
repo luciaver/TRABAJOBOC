@@ -1,0 +1,122 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.usuario{
+    display:flex;
+    align-items:center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.usuario img{
+    height: 50px;
+}
+
+.encabezado{
+    background-color: #87a7c4;
+    color: white;
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.encabezado h2{
+    margin:0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+ 
+    
+    
+}
+
+nav{
+    display: flex;
+    gap: 70px; 
+    margin-left: 60px;
+    align-items: center;
+}
+nav a {
+    color: black;
+    margin: 0;
+    font-size: 16px;
+}
+
+nav a:hover{
+    color: blue;
+}
+
+.logo{
+    margin-left: auto;
+    width: 20%;
+}
+
+.logo img{
+    height:auto;
+    margin-left: 10px;
+    width: 150%;
+}
+
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+thead{
+    background-color:rgb(96, 158, 96);
+    
+}
+
+tr:nth-child(even){
+    background-color: rgb(197, 190, 190);
+}
+
+th, td {
+    border: 2px solid black;
+    text-align: center;
+    padding: 8px;
+}
+.btn-hecho {
+    background-color: rgb(243, 19, 19);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: default;
+    font-weight: bold;
+}
+
+input{
+    padding:10px;
+    border:1px solid #ccc;
+    border: radius 5px;
+    font-size: 16px;
+    margin-right: 10px;
+   
+}
+
+button{
+    padding:10px 20px;
+    background-color: blue;
+    color:#fff;
+    border: radius 5px;
+    cursor: pointer;
+}
+
+.buscador{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-left:75px;
+
+}
