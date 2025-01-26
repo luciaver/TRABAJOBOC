@@ -76,7 +76,7 @@ a:hover{
 
 article {
     margin: auto;
-    margin-top: 4%;
+    margin-top: 5%;
     background-color: rgb(57, 98, 135);
     width: 80%;
     border-radius: 30px;
@@ -124,7 +124,7 @@ p {
 
 .boton_bocatas {
     width: 100%;
-    height: 30px;
+    height: 40px;
     border: none;
     border-radius: 20px;
 }
@@ -134,7 +134,7 @@ p {
     color: white;
 }
 
-/*historial_pedidos*/
+/*historial_pedidos y descuento user*/
 
 h1 {
     text-align: center;
