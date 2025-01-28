@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="administrador.css">
+    <title>Administrador</title>
+</head>
+<body>
+    <header>
+        <div id="div_user">
+            <h2 id="nombre_user">Administrador</h2>
+         </div>
+    
+        <nav>
+            <ul>
+                <li><a href="inicio_user.html">Inicio</a></li>
+                <li><a href="admin_bocadillos.html">Bocadillo</a></li>
+                <li><a href="">Descuentos</a></li>
+            </ul>
+        </nav>
+    
+        <div id="div_logo">
+            <img src="img/login-logo.png" id="img_logo">
+        </div>
+    </header>
+    <section class="container">
+        <div class="section">
+            <form action="post" enctype="multipart/form-data">
+
+    
+            <h3>Crear bocadillo</h3>
+            <label for="nombre">Nombre del bocadillo</label>
+            <input type="text" id="nombre" placeholder="Ingrese el nombre">
+
+            <label for="alergenos">Alérgenos</label>
+            <textarea id="alergenos" placeholder="Ingrese una breve descripción"></textarea>
+
+            <label for="tipo">Tipo</label>
+            <select id="tipo">
+                <option value="cliente">Caliente</option>
+                <option value="frio">Frío</option>
+            </select>
+
+            <label for="imagen">Imagen</label>
+            <input type="file" id="imagen">
+
+            <label for="precio">Precio (~$)</label>
+            <input type="number" id="precio" placeholder="Ingrese el precio">
+
+            <button>Crear bocadillo</button>
+        </div>
+
+       
+        <div class="section">
+            <h3>Modificar bocadillo</h3>
+            <label for="seleccionar-bocadillo">Seleccione bocadillo</label>
+            <select id="seleccionar-bocadillo">
+                <option>Nocilla</option>
+                <option>Jamon</option>
+                <option>Queso</option>
+            </select>
+
+            <label for="nuevo-precio">Nuevo Precio $</label>
+            <input type="number" id="nuevo-precio" placeholder="Ingrese un nuevo precio">
+
+            <button>Modificar bocadillo</button>
+        </div>
+
+    
+        <div class="section">
+            <h3>Solicitud de bocadillo</h3>
+            <label for="solicitar-bocadillo">Seleccione bocadillo</label>
+            <select id="solicitar-bocadillo">
+                <option>Jamon</option>
+                <option>Nocilla</option>
+                <option>Tomatito</option>
+            </select>
+
+            <button>Solicitar bocadillo</button>
+        </div>
+    </section>
+
+
+</form>
+
+
+    
+</body>
+</html>

@@ -1,69 +1,75 @@
-body{
-    font-family: Arial, sans-serif;
-    margin: 0;
+@font-face {
+    font-family: "Comfortaa";
+    src: url("fonts/comfortaa.ttf") format("truetype");
+}
+
+body {
+    background-color: white;
     padding: 0;
-}
-
-.usuario{
-    display:flex;
-    align-items:center;
-    gap: 15px;
-    margin-right: 20px;
-}
-
-.usuario img{
-    height: 50px;
-    margin-left: 10px;
-}
-
-.encabezado{
-    background-color: #87a7c4;
-    color: white;
-    width: 97%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.encabezado h2{
-    margin:0;
-}
-
-header{
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
- 
-    
-    
-}
-
-nav{
-    display: flex;
-    gap: 70px; 
-    margin-left: 60px;
-    align-items: center;
-}
-nav a {
-    color: black;
     margin: 0;
-    font-size: 16px;
+    height: 100vh;  
 }
 
-nav a:hover{
+header {
+    width: 100%;
+    background-color: #87a7c4;
+    height: 13%;
+    display: flex;
+}
+
+#div_user {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+}
+
+#imagen_user {
+    height: 100%;
+    border-radius: 100%;
+}
+
+#nombre_user {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2%;
+    color: white;
+}
+
+nav {
+    font-family: 'comfortaa';
+    width: 60%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+ul {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
     color: blue;
 }
 
-.logo{
-    margin-left: auto;
+#logo {
+    width: 20%;
+    background-color: blue;
+}
+
+#div_logo {
     width: 20%;
 }
 
-.logo img{
-    height:auto;
-    margin-left: 10px;
-    width: 150%;
+#img_logo {
+    width: 100%;
 }
 
 h1 {
