@@ -28,7 +28,7 @@ header {
 #nombre_user {
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 2%;
+    margin-left: 4%;
     color: white;
 }
 
@@ -47,7 +47,7 @@ ul {
     flex-wrap: wrap;
 }
 
-a {
+li a {
     text-decoration: none;
     color: white;
 }
@@ -69,4 +69,108 @@ a:hover{
 #img_logo {
     width: 100%;
     height: 100%;
+}
+
+/* admin_usuarios*/
+
+#div_titulo {   
+    display: flex;
+    justify-content: center;
+}
+
+#div_enlaces_gestion_usuario {
+    width: 30%;
+    margin-left: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div_enlaces {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+#eliminar_usuario {
+    background-color: rgb(255, 119, 119);
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+
+section div div a {
+    text-decoration: none;
+    color: white;
+}
+
+section div div a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#eliminar_usuario:hover {
+    background-color: darkred;
+    text-decoration: none;
+    color: white;
+}
+
+#añadir_usuario {
+    margin: 20px;
+    background-color: rgb(98, 134, 157);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+
+#añadir_usuario:hover {
+    background-color: rgb(62, 104, 131);
+    color: white;
+}
+
+#div_tabla {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    min-width: 600px;
+}
+
+#tabla_usuarios {
+    width: 90%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: rgb(35, 77, 105);
+    color: white;
+}
+
+th, td {
+    border: 2px solid black;
+    text-align: center;
+    padding: 3px;
+}
+
+ol {
+    padding-left: 20px;  
+}
+
+/*admin_usuarios_eliminar*/
+
+#eliminar_usuarios {
+    background-color: rgb(255, 119, 119);
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+    color: white;
+}
+
+#eliminar_usuarios:hover {
+    background-color: red;
 }
