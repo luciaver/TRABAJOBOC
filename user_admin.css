@@ -174,3 +174,15 @@ ol {
 #eliminar_usuarios:hover {
     background-color: red;
 }
+
+/* admin_usuarios_añadir*/
+
+#section_crearUsusario {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#formulario_crearUsuario {
+    background-color:   red;
+}
