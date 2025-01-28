@@ -76,7 +76,7 @@ a:hover{
 
 article {
     margin: auto;
-    margin-top: 5%;
+    margin-top: 4%;
     background-color: rgb(57, 98, 135);
     width: 80%;
     border-radius: 30px;
@@ -122,32 +122,19 @@ p {
     justify-content: center;
 }
 
-.boton_bocatas_pedir {
+.boton_bocatas {
     width: 100%;
-    height: 40px;
+    height: 30px;
     border: none;
     border-radius: 20px;
 }
 
-.boton_bocatas_pedir:hover {
+.boton_bocatas:hover {
     background-color: rgb(59, 101, 138);
     color: white;
 }
 
-.boton_bocatas_retirar {
-    width: 100%;
-    background-color: rgb(245, 111, 111);
-    height: 40px;
-    border: none;
-    border-radius: 20px;
-}
-
-.boton_bocatas_retirar:hover {
-    background-color: red;
-    color: white;
-}
-
-/*historial_pedidos y descuento user*/
+/*historial_pedidos*/
 
 h1 {
     text-align: center;
@@ -161,7 +148,6 @@ table {
 }
 thead{
     background-color: rgb(148, 123, 176);
-    
 }
 
 tr:nth-child(even){
