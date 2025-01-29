@@ -127,3 +127,9 @@ button{
     margin-left:75px;
 
 }
+.resumen {
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
