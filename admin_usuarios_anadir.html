@@ -29,24 +29,40 @@
         <div id="formulario_crearUsuario">
             <form action="" method="post" enctype="multipart/form-data">
                 <div>
-                    <label for="Nombre_usuario">Nombre de usuario</label>
-                    <input type="text" name="Nombre_usuario">
+                    <label for="Nombre_apellidos_usuario">Nombre y apellidos del usuario</label>
+                    <input type="text" name="Nombre_apellidos_usuario" placeholder="Daniel Pamies Teruel" required>
                 </div>
 
                 <div>
                     <label for="curso">Curso</label>
-                    <select name="cueso" required>
+                    <select name="curso" required>
                         <option value="1ºESO">1ºESO</option>
                         <option value="2ºESO">2ºESO</option>
                         <option value="3ºESO">3ºESO</option>
                         <option value="4ºESO">4ºESO</option>
                     </select>
                 </div>
+
+                <div>
+                    <label for="gmail">Gmail</label>
+                    <input type="email" name="gmail" placeholder="daniel@elCampico.com" required>
+                </div>
+
+                <div>
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" name="contrasena" placeholder="pepito_123" required>
+                </div>
+
+                <div>
+                    <label for="repetir_contrasena">Repetir la contraseña</label>
+                    <input type="password" name="repetir_contrasena" placeholder="pepito_123" required>
+                </div>
+
+                <div>
+                    <label for="foto">Ponga una foto suya</label>
+                    <input type="file" name="foto" accept="jpg, png">
+                </div>
             </form>
-        </div>
-
-        <div>
-
         </div>
     </section>
 </body>
