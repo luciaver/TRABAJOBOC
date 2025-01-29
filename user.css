@@ -91,6 +91,7 @@ section {
     border-radius: 30px;
     margin: 1.6em;
     padding: 10px;
+    min-width: 500px;
 }
 
 .section_div_img {

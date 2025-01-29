@@ -184,9 +184,12 @@ ol {
 }
 
 #formulario_crearUsuario {
-    background-color:   red;
+    background-color:   rgb(194, 220, 246);
 }
 
-#div_nombreApellido {
-    background-color: red;
+.formulario_div {
+    background-color: rgb(228, 237, 246);
+    height: 20px;
+    display: flex;
+    text-align: center;
 }
