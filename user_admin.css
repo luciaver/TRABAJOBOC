@@ -19,7 +19,7 @@ header {
 
 #div_user {
     margin-left: 10px;
-    width: 25%;
+    width: 35%;
     height: 100%;
     display: flex;
     text-align: center;
@@ -76,6 +76,7 @@ a:hover{
 #div_titulo {   
     display: flex;
     justify-content: center;
+    font-size: 1.3em;
 }
 
 #div_enlaces_gestion_usuario {
@@ -184,12 +185,35 @@ ol {
 }
 
 #formulario_crearUsuario {
+    font-family: Helvetica,Helvetica,Arial,sans-serif;
     background-color:   rgb(194, 220, 246);
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .formulario_div {
     background-color: rgb(228, 237, 246);
-    height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+.rellenar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#curso_crear {
     display: flex;
     text-align: center;
+}
+
+#curso_crear {
+    margin-right: 10px;
+}
+
+.input_crear {
+    border-radius: 20px;
+    padding-left: 5px;
+    height: 20px;
 }
