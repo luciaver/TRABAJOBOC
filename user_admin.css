@@ -179,16 +179,21 @@ ol {
 /* admin_usuarios_añadir*/
 
 #section_crearUsusario {
-    width: 80%;
+    width: 40%;
     margin: 0 auto;
     margin-top: 20px;
+    min-width: 300px;
+    background-color:#bbd7f2;
+    border-radius: 20px;
 }
 
 #formulario_crearUsuario {
     font-family: Helvetica,Helvetica,Arial,sans-serif;
-    background-color:   rgb(194, 220, 246);
     border-radius: 20px;
-    padding: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: black;
 }
 
 .formulario_div {
@@ -196,6 +201,7 @@ ol {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 1.4em;
+    border-radius: 20px;
 }
 
 .rellenar {
@@ -209,11 +215,51 @@ ol {
 }
 
 #curso_crear {
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .input_crear {
-    border-radius: 20px;
-    padding-left: 5px;
-    height: 20px;
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.label_crear {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.div_input_crear {
+    display: flex;
+    justify-content: center;
+}
+
+#seleccion_crear {
+    margin-top: 13px;
+}
+
+#div_boton_crear {
+    display: flex;
+    justify-content: center;
+}
+
+#boton_crear {
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 14px;
+    width: 30%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#boton_crear:hover {
+    background-color: rgb(62, 104, 131);
+    color: white;
 }
