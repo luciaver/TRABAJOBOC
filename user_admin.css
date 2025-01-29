@@ -19,7 +19,7 @@ header {
 
 #div_user {
     margin-left: 10px;
-    width: 25%;
+    width: 35%;
     height: 100%;
     display: flex;
     text-align: center;
@@ -76,6 +76,7 @@ a:hover{
 #div_titulo {   
     display: flex;
     justify-content: center;
+    font-size: 1.3em;
 }
 
 #div_enlaces_gestion_usuario {
@@ -178,11 +179,87 @@ ol {
 /* admin_usuarios_añadir*/
 
 #section_crearUsusario {
-    width: 80%;
+    width: 40%;
     margin: 0 auto;
     margin-top: 20px;
+    min-width: 300px;
+    background-color:#bbd7f2;
+    border-radius: 20px;
 }
 
 #formulario_crearUsuario {
-    background-color:   red;
+    font-family: Helvetica,Helvetica,Arial,sans-serif;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: black;
+}
+
+.formulario_div {
+    background-color: rgb(228, 237, 246);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    border-radius: 20px;
+}
+
+.rellenar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#curso_crear {
+    display: flex;
+    text-align: center;
+}
+
+#curso_crear {
+    margin: 10px;
+}
+
+.input_crear {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.label_crear {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.div_input_crear {
+    display: flex;
+    justify-content: center;
+}
+
+#seleccion_crear {
+    margin-top: 13px;
+}
+
+#div_boton_crear {
+    display: flex;
+    justify-content: center;
+}
+
+#boton_crear {
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 14px;
+    width: 30%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#boton_crear:hover {
+    background-color: rgb(62, 104, 131);
+    color: white;
 }
