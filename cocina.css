@@ -80,7 +80,7 @@ table {
     border-collapse: collapse;
 }
 thead{
-    background-color:rgb(96, 158, 96);
+    background-color:rgb(120, 168, 120);
     
 }
 
@@ -94,6 +94,15 @@ th, td {
     padding: 8px;
 }
 .btn-hecho {
+    background-color: rgb(37, 222, 74);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: default;
+    font-weight: bold;
+}
+.btn-Pendiente {
     background-color: rgb(243, 19, 19);
     color: white;
     border: none;
@@ -102,6 +111,7 @@ th, td {
     cursor: default;
     font-weight: bold;
 }
+
 
 input{
     padding:10px;
@@ -130,6 +140,20 @@ button{
 .resumen {
     width: 90%;
     margin: 20px auto;
-    border: 1px solid #ccc;
+    border: 1px solid #c8c5c5;
     padding: 10px;
+}
+.filtros {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+
+    width: 90%;
+   
+}
+
+.filtros input,
+.filtros select,
+.filtros button {
+    margin-right: 20px;
 }
