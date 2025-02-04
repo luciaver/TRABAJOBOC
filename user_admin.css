@@ -206,9 +206,9 @@ ol {
 
 @media (max-width: 1040px) {
     .article_crearModificarUser {
-        margin: 0 auto; /* Esto asegura que el section esté centrado */
-        width: 100%;   /* Ajusta el ancho al 100% en pantallas pequeñas */
-        padding: 20px; /* Reduce el padding para evitar que el contenido se vea apretado */
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
     }
 }
 
