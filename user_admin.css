@@ -97,9 +97,9 @@ a:hover{
     background-color: rgb(255, 119, 119);
     margin: 20px;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    padding: 7px;
+    padding: 10px;
+    font-size: 15px;
+    height: 20px;
 }
 
 section div div a {
@@ -118,16 +118,16 @@ section div div a:hover {
     color: white;
 }
 
-#añadir_usuario {
+#añadir_modificar_usuario {
     margin: 20px;
     background-color: rgb(98, 134, 157);
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    padding: 7px;
+    padding: 10px;
 }
 
-#añadir_usuario:hover {
+#añadir_modificar_usuario:hover {
     background-color: rgb(62, 104, 131);
     color: white;
 }
