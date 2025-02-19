@@ -286,6 +286,11 @@ ol {
     justify-content: center;
 }
 
+#label_elegirCurso {
+    display: flex;
+
+}
+
 
 #boton_crear {
     background-color: #4e92c4;
