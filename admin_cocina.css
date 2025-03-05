@@ -19,7 +19,7 @@ header {
 
 #div_user {
     margin-left: 10px;
-    width: 25%;
+    width: 35%;
     height: 100%;
     display: flex;
     text-align: center;
@@ -28,7 +28,7 @@ header {
 #nombre_user {
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 6%;
+    margin-left: 4%;
     color: white;
 }
 
@@ -47,7 +47,7 @@ ul {
     flex-wrap: wrap;
 }
 
-a {
+li a {
     text-decoration: none;
     color: white;
 }
