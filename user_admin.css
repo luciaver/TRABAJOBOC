@@ -80,26 +80,29 @@ a:hover{
 }
 
 #div_enlaces_gestion_usuario {
-    width: 30%;
-    margin-left: 70%;
+    width: 72%;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .div_enlaces {
-    width: 40%;
+    width: 30px;
     display: flex;
+    margin-left: 20%;
     justify-content: center;
     margin: 5px;
+    min-width: 100px;
 }
 
 #eliminar_usuario {
     background-color: rgb(255, 119, 119);
-    margin: 20px;
+    margin: 30px;
     border-radius: 20px;
     padding: 10px;
     font-size: 15px;
-    height: 20px;
+    height: 30%;
+    width: 70%;
 }
 
 section div div a {
