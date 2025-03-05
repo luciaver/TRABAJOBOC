@@ -173,6 +173,32 @@ th, td {
     text-align: center;
     padding: 8px;
 }
+
+.titulo_bocata {
+    color: white;
+}
+
+.btn-haciendo {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: default;
+    font-weight: bold;
+}
+
+.btn-preparado {
+    background-color: rgb(96, 191, 7);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: default;
+    font-weight: bold;
+}
+
+
 .btn-retirado {
     background-color: green;
     color: white;

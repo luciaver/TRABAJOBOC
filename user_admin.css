@@ -80,26 +80,29 @@ a:hover{
 }
 
 #div_enlaces_gestion_usuario {
-    width: 30%;
-    margin-left: 70%;
+    width: 72%;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .div_enlaces {
-    width: 40%;
+    width: 30px;
     display: flex;
+    margin-left: 20%;
     justify-content: center;
     margin: 5px;
+    min-width: 100px;
 }
 
 #eliminar_usuario {
     background-color: rgb(255, 119, 119);
-    margin: 20px;
+    margin: 30px;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    padding: 7px;
+    padding: 10px;
+    font-size: 15px;
+    height: 30%;
+    width: 70%;
 }
 
 section div div a {
@@ -118,16 +121,16 @@ section div div a:hover {
     color: white;
 }
 
-#añadir_usuario {
+#añadir_modificar_usuario {
     margin: 20px;
     background-color: rgb(98, 134, 157);
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    padding: 7px;
+    padding: 10px;
 }
 
-#añadir_usuario:hover {
+#añadir_modificar_usuario:hover {
     background-color: rgb(62, 104, 131);
     color: white;
 }
@@ -176,46 +179,65 @@ ol {
     background-color: red;
 }
 
-/* admin_usuarios_añadir*/
+/* admin_usuarios_añadir_modificar*/
 
-#section_crearUsusario {
-    width: 40%;
+#section_crearModificarUser {
+    width: 80%;
     margin: 0 auto;
-    margin-top: 20px;
-    min-width: 300px;
-    background-color:#bbd7f2;
+    margin-top: 40px;
+    min-width: 350px;
+    background-color: #f4f8ff;
     border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-#formulario_crearUsuario {
-    font-family: Helvetica,Helvetica,Arial,sans-serif;
+
+.article_crearModificarUser {
+    width: 45%;
+    background-color: #e1f0ff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 250px;
     border-radius: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-color: black;
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1040px) {
+    .article_crearModificarUser {
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.article_crearModificarUser:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.div_formulario {
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .formulario_div {
     background-color: rgb(228, 237, 246);
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 1.4em;
-    border-radius: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1em;
 }
 
-.rellenar {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#curso_crear {
-    display: flex;
-    text-align: center;
-}
-
-#curso_crear {
-    margin: 10px;
+.formulario_div:hover {
+    background-color: #d1e5f5;
 }
 
 .input_crear {
@@ -228,7 +250,14 @@ ol {
     font-size: 16px;
 }
 
-.label_crear {
+.input_crear:focus {
+    border-color: #8cb2f5;
+    outline: none;
+}
+
+.label_crear_modificar {
+    font-size: 1.1em;
+    color: #4e92c4;
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
@@ -237,10 +266,23 @@ ol {
 .div_input_crear {
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 
-#seleccion_crear {
-    margin-top: 13px;
+.seleccion {
+    width: 80%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    background-color: white;
+    font-size: 16px;
+    margin-left: 10%;
+}
+
+#seleccion_crear:focus {
+    border-color: #8cb2f5;
+    outline: none;
 }
 
 #div_boton_crear {
@@ -248,18 +290,22 @@ ol {
     justify-content: center;
 }
 
-#boton_crear {
-    background-color: #ffffff;
-    color: black;
+.boton_crear_modificar {
+    background-color: #4e92c4;
+    color: white;
     border: none;
     padding: 14px;
-    width: 30%;
+    width: 40%;
     border-radius: 8px;
-    cursor: pointer;
     font-size: 16px;
+    cursor: pointer;
 }
 
-#boton_crear:hover {
-    background-color: rgb(62, 104, 131);
-    color: white;
+.boton_crear_modificar:hover {
+    background-color: #376c91;
+}
+
+.rellenar {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
