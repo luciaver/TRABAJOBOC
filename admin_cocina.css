@@ -139,7 +139,6 @@ textarea {
     .container {
         flex-direction: column;
         width: 100%;
-        pad
         padding:10px;
     }
 }
