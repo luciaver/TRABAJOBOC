@@ -252,7 +252,7 @@ ol {
     outline: none;
 }
 
-.label_crear {
+.label_crear_modificar {
     font-size: 1.1em;
     color: #4e92c4;
     display: flex;
@@ -274,6 +274,7 @@ ol {
     border: 2px solid #ccc;
     background-color: white;
     font-size: 16px;
+    margin-left: 10%;
 }
 
 #seleccion_crear:focus {
@@ -286,39 +287,22 @@ ol {
     justify-content: center;
 }
 
-#label_elegirCurso {
-    display: flex;
-
-}
-
-
-#boton_crear {
+.boton_crear_modificar {
     background-color: #4e92c4;
     color: white;
     border: none;
     padding: 14px;
     width: 40%;
     border-radius: 8px;
-    cursor: pointer;
     font-size: 16px;
+    cursor: pointer;
 }
 
-#boton_crear:hover {
-    background-color: #3b7ea1;
+.boton_crear_modificar:hover {
+    background-color: #376c91;
 }
 
 .rellenar {
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-#curso_crear {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 20px;
-}
-
-#curso_crear {
-    margin: 10px;
 }
