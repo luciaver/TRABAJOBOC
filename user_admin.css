@@ -145,6 +145,7 @@ section div div a:hover {
     display: flex;
     justify-content: center;
     padding: 5px;
+    color: white;
 }
 
 .modificar:hover {
