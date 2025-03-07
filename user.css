@@ -54,7 +54,7 @@ nav {
     color: white;
     justify-content: space-around;
     padding-bottom: 10px;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 a {
@@ -79,7 +79,7 @@ a:hover{
     width: 100%;
 }
 
-@media (max-width: 800px){
+@media (max-width: 920px){
     #div_logo {
         width: 0%;
         display: none;
@@ -159,8 +159,8 @@ ul {
 h3 {
     margin-left: 20px;
     color: black;
+    font-size: 1.4em;
     font-family: "Times New Roman", Times, serif;
-    font-size: 1.2;
     margin-top: 5px;
 }
 
