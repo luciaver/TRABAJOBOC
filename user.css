@@ -38,16 +38,23 @@ header {
 
 nav {
     font-family: 'comfortaa';
-    width: 60%;
+    width: 50%;
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-ul {
+#div_horario {
+    width: 10%;
+    font-family: 'comfortaa';
+}
+
+.ul_nav {
     display: flex;
     color: white;
     justify-content: space-around;
+    padding-bottom: 10px;
+    font-size: 1.4em;
 }
 
 a {
@@ -76,13 +83,19 @@ a:hover{
 
 article {
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     background-color: rgb(57, 98, 135);
     width: 80%;
+    min-width: 400px;
     border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
 }
 
 section {
@@ -91,7 +104,7 @@ section {
     border-radius: 30px;
     margin: 1.6em;
     padding: 10px;
-    min-width: 500px;
+    min-width: 300px;
 }
 
 .section_div_img {
@@ -105,15 +118,33 @@ section {
     margin-top: 10px;
 }
 
+ul {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.titulo_bocata {
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .div_descripcion {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 30px;
 }
 
-p {
-    margin: 0;
-    color: white;
+h3 {
+    margin-left: 20px;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2;
 }
 
 .div_boton {
@@ -148,12 +179,7 @@ p {
     color: white;
 }
 
-/*historial_pedidos y descuento user*/
-
-h1 {
-    text-align: center;
-    margin-top: 20px;
-}
+/*historial_pedidos*/
 
 table {
     width: 90%;
@@ -174,22 +200,8 @@ th, td {
     padding: 8px;
 }
 
-.titulo_bocata {
-    color: white;
-}
-
-.btn-haciendo {
+.btn-pendiente {
     background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: default;
-    font-weight: bold;
-}
-
-.btn-preparado {
-    background-color: rgb(96, 191, 7);
     color: white;
     border: none;
     padding: 5px 10px;
