@@ -102,7 +102,7 @@ a:hover{
     border-radius: 20px;
     padding: 10px;
     font-size: 15px;
-    height: 30%;
+    height: 20px;
     width: 70%;
 }
 
@@ -122,16 +122,32 @@ section div div a:hover {
     color: white;
 }
 
-#añadir_modificar_usuario {
-    margin: 20px;
-    background-color: rgb(98, 134, 157);
+#anadir {
+    background-color: rgb(45, 178, 57);
+    margin: 30px;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
     padding: 10px;
+    font-size: 15px;
+    height: 20px;
+    width: 70%;
 }
 
-#añadir_modificar_usuario:hover {
+#anadir:hover {
+    background-color: rgb(26, 99, 32);
+    color: white;
+}
+
+.modificar {
+    margin: 5px;
+    background-color: rgb(98, 134, 157);
+    border-radius: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.modificar:hover {
     background-color: rgb(62, 104, 131);
     color: white;
 }
@@ -180,10 +196,10 @@ ol {
     background-color: red;
 }
 
-/* admin_usuarios_añadir_modificar*/
+/* admin_usuarios_añadir y admin_usuarios_modificar */
 
 #section_crearModificarUser {
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
     margin-top: 40px;
     min-width: 350px;
@@ -193,12 +209,12 @@ ol {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
 .article_crearModificarUser {
-    width: 45%;
+    width: 90%;
     background-color: #e1f0ff;
     margin-top: 20px;
     margin-bottom: 20px;
