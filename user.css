@@ -76,13 +76,19 @@ a:hover{
 
 article {
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     background-color: rgb(57, 98, 135);
     width: 80%;
+    min-width: 400px;
     border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
 }
 
 section {
@@ -91,7 +97,7 @@ section {
     border-radius: 30px;
     margin: 1.6em;
     padding: 10px;
-    min-width: 500px;
+    min-width: 300px;
 }
 
 .section_div_img {
@@ -105,14 +111,22 @@ section {
     margin-top: 10px;
 }
 
+.titulo_bocata {
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+}
+
 .div_descripcion {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 30px;
+    background-color: rgb(55, 144, 110);
 }
 
-p {
-    margin: 0;
+h3 {
+    margin-left: 20px;
     color: white;
 }
 
@@ -148,12 +162,7 @@ p {
     color: white;
 }
 
-/*historial_pedidos y descuento user*/
-
-h1 {
-    text-align: center;
-    margin-top: 20px;
-}
+/*historial_pedidos*/
 
 table {
     width: 90%;
@@ -172,10 +181,6 @@ th, td {
     border: 2px solid black;
     text-align: center;
     padding: 8px;
-}
-
-.titulo_bocata {
-    color: white;
 }
 
 .btn-pendiente {
