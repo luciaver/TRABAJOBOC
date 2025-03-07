@@ -11,9 +11,8 @@ body {
 }
 
 header {
-    width: 100%;
     background-color: #87a7c4;
-    height: 13%;
+    height: 100px;
     display: flex;
 }
 
@@ -77,6 +76,7 @@ a:hover{
 
 #img_logo {
     width: 100%;
+    height: 100px;
 }
 
 @media (max-width: 920px){
