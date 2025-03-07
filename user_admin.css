@@ -196,10 +196,10 @@ ol {
     background-color: red;
 }
 
-/* admin_usuarios_añadir_modificar*/
+/* admin_usuarios_añadir y admin_usuarios_modificar */
 
 #section_crearModificarUser {
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
     margin-top: 40px;
     min-width: 350px;
@@ -209,12 +209,12 @@ ol {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
 .article_crearModificarUser {
-    width: 45%;
+    width: 90%;
     background-color: #e1f0ff;
     margin-top: 20px;
     margin-bottom: 20px;
