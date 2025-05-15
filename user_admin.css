@@ -184,11 +184,11 @@ ol {
 
 #eliminar_usuarios {
     background-color: rgb(255, 119, 119);
-    margin: 20px;
+    margin: 10px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    padding: 7px;
+    padding: 10px;
     color: white;
 }
 
