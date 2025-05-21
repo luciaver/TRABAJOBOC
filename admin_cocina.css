@@ -52,8 +52,8 @@ nav {
     display: flex;
     color: white;
     justify-content: space-around;
-    padding-bottom: 10px;
-    font-size: 1.3em;
+    flex-wrap: wrap;
+    font-size: 2em;
 }
 
 a {
