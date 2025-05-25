@@ -10,6 +10,9 @@
 
     <?php
     require_once "conexion.php";
+    $email = isset($_POST['correo']) ? $_POST['correo']:null;
+    $passg = isset($_POST['password']) ? $_POST['password']:null;
+
     ?>
 
     <div id="base-login">
@@ -18,12 +21,12 @@
             <img src="img/login-logo.png" id="logo">
         </div>
 
-    <form action="" method="get" id="formulario">
+    <form action="" method="post" id="formulario">
         
-        <label for="Correo">Correo electrónico</label>
+        <label for="correo">Correo electrónico</label>
         
         <div class="formulario-registros">
-            <input type="text" class="input-registro" name="Correo" placeholder="ejemplo@elcampico.com" value="<?php echo $email ?>" require>
+            <input type="text" class="input-registro" name="correo" placeholder="ejemplo@elcampico.com" value="<?php echo $email ?>" required>
         </div>
         
         <label for="password">Contraseña</label>
@@ -39,9 +42,6 @@
     </div>
 
     <?php
-    
-    $email = $_POST['email'] ? $_POST['email']:null;
-    $passg = $_POST['passg'] ? $_POST['passg']:null;
 
     $stmt = $pdo->prepare("SELECT * FROM usuario where email = '$email' and PASSWORD = '$passg'");
 
