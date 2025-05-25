@@ -13,6 +13,7 @@
     $email = isset($_POST['correo']) ? $_POST['correo']:null;
     $passg = isset($_POST['password']) ? $_POST['password']:null;
 
+    $rol = null;
     ?>
 
     <div id="base-login">
@@ -45,10 +46,25 @@
 
     $stmt = $pdo->prepare("SELECT * FROM usuario where email = '$email' and PASSWORD = '$passg'");
 
-    if ($stmt != null && $email != null && $passg != null) {
-        header("Location: admin_usuarios.html");
+    if ($stmt != null && $email != null && $passg != null){
+        if(isset($_POST['rol'])) {
+            $rol = $_POST['rol'];
+        } else {
+            $rol = null;
+        }
+        if ($rol == "Alumno"){
+            header("Location: inicio_user.html");
+        }else if($rol == "Cocina"){
+            header("Location: cocina.html");
+        }else if($rol == "Admin"){
+            header("Location: admin_usuario.html");
+        }else{ 
+            echo "<p>Usuario o contraseña mal escrita</p>";
+        }
+    }else{
+        echo "<p>Usuario o contraseña mal escrita</p>";
     }
-    
+
     ?>
 
 </body>
