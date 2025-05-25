@@ -23,13 +23,13 @@
         <label for="Correo">Correo electrónico</label>
         
         <div class="formulario-registros">
-            <input type="text" class="input-registro" name="Correo" placeholder="ejemplo@elcampico.com" value="<?php $email ?>">
+            <input type="text" class="input-registro" name="Correo" placeholder="ejemplo@elcampico.com" value="<?php echo $email ?>" require>
         </div>
         
         <label for="password">Contraseña</label>
         
         <div class="formulario-registros">
-            <input type="password" class="input-registro" name="password" value="<?php $passg ?>">
+            <input type="password" class="input-registro" name="password" value="<?php echo $passg ?>" require>
         </div>  
        
         <button type="submit" name="acceder" id="form-submit">Acceder</button>
@@ -43,20 +43,11 @@
     $email = $_POST['email'] ? $_POST['email']:null;
     $passg = $_POST['passg'] ? $_POST['passg']:null;
 
-    $stmt = $pdo->prepare("SELECT * FROM usuario");
+    $stmt = $pdo->prepare("SELECT * FROM usuario where email = '$email' and PASSWORD = '$passg'");
 
-    try {
-        while ($row = $stmt->fetch()){
-            if(isset($_POST['email'])) {
-                if(isset($_POST['passg'])){
-                    
-                }
-            }
-        }
-    } catch(PDOException $e){
-        echo $e->getMessage();
+    if ($stmt != null && $email != null && $passg != null) {
+        header("Location: admin_usuarios.html");
     }
-
     
     ?>
 
