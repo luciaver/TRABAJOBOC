@@ -1,73 +1,78 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    background:url(img/fondo_recu.jpeg);
+    background: url(img/fondo_recu.jpeg) no-repeat center center fixed;
     background-size: cover;
-    font-family: sans-serif;
-    height:100vh;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.caja{
-    
-    width: 30%;
-    background:white;
+.caja {
+    width: 500px;
+    background: #a5cee0;
     box-sizing: border-box;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
-.caja img.candado{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: no;
 
-}
-
-h5{
-    color: rgb(44, 42, 42);
-}
-
-.caja .candado{
-    width: 170px;
-    height: 170px;
-    border: radius 50%;
-    background: transparent;
-    
-}
-.caja h3 h5{
-    margin: 0;
-    text-align: center;
-    font-size: 22px;
-}
-
-.caja input{
-    width: 80%;
+.caja img.candado {
+    width: 100px;
+    height: 100px;
     margin-bottom: 20px;
-    height: 20px;
 }
 
-.caja input [type="text"]{
-    border: none;
-    border: bottom 1px solid #87a7c4;
-    background: transparent;
-    outline: none;
-    font: size 16px;
-    color:#fff;
-   
+h3 {
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.caja input[type="submit"]{
+h5 {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.caja input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #87a7c4;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.caja input[type="text"] {
+    background: #f9f9f9;
+}
+
+.caja input[type="submit"] {
     border: none;
     outline: none;
-    height: 30px;
-    background:rgb(117, 116, 116);
+    height: 40px;
+    background: #5cb85c;
     color: #fff;
     font-size: 18px;
-    border: radius 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
 
+.caja input[type="submit"]:hover {
+    background: #4cae4c;
+}
+
+.mensaje-correcto {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+.mensaje-error {
+    margin-top: 20px;
+    font-weight: bold;
+    color: red;
 }
