@@ -51,13 +51,12 @@ nav {
     display: flex;
     color: white;
     justify-content: space-around;
-<<<<<<< HEAD
+
     padding-bottom: 10px;
     font-size: 1.3em;
-=======
     flex-wrap: wrap;
     font-size: 2em;
->>>>>>> 6a01e0ddd7ef8628779ff352f42dd6eca6a4d4b3
+
 }
 
 a {
@@ -102,17 +101,21 @@ a:hover{
 
 /* admin_usuarios*/
 
-#div_titulo {   
+#div_titulo {  
     display: flex;
     justify-content: center;
-    font-size: 1.3em;
+    font-size: 1.7em;
+    margin: 30px 0 20px;
+    
 }
 
 #div_enlaces_gestion_usuario {
-    width: 72%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
+    gap: 15px;
 }
 
 .div_enlaces {
@@ -125,13 +128,14 @@ a:hover{
 }
 
 #eliminar_usuario {
-    background-color: rgb(255, 119, 119);
+    background-color: #d9363e;
     margin: 30px;
     border-radius: 20px;
-    padding: 10px;
-    font-size: 15px;
+    padding: 12px;
+    font-size: 1em;
     height: 20px;
-    width: 70%;
+    width: 100%;
+    
 }
 
 section div div a {
@@ -167,7 +171,7 @@ section div div a:hover {
 
 .modificar {
     margin: 5px;
-    background-color: rgb(98, 134, 157);
+    background-color: #5b8caa;
     border-radius: 20px;
     height: 20px;
     display: flex;
@@ -182,7 +186,7 @@ section div div a:hover {
 }
 
 #div_tabla {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -190,7 +194,7 @@ section div div a:hover {
 }
 
 #tabla_usuarios {
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -202,7 +206,10 @@ thead {
 th, td {
     border: 2px solid black;
     text-align: center;
-    padding: 3px;
+    padding: 12px 10px;
+}
+tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
 }
 
 ol {
@@ -228,26 +235,29 @@ ol {
 /* admin_usuarios_añadir y admin_usuarios_modificar */
 
 #section_crearModificarUser {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 40px;
     min-width: 350px;
-    background-color: #f4f8ff;
+    background-color: #e6f0ff;
     border-radius: 20px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 35px 40px;
     justify-content: center;
+}
+#section_crearModificarUser:hover {
+    box-shadow: 0 12px 32px rgba(21, 88, 214, 0.4);
 }
 
 
 .article_crearModificarUser {
-    width: 90%;
-    background-color: #e1f0ff;
+    width: 50%;
+    background-color: #d6e6ff;
     margin-top: 20px;
     margin-bottom: 20px;
     min-width: 250px;
     border-radius: 20px;
-    padding: 20px;
+    padding:30px 25px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -264,8 +274,8 @@ ol {
 }
 
 .div_formulario {
-    font-family: Helvetica, Arial, sans-serif;
-    padding: 20px;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:25px 30px;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
@@ -277,31 +287,34 @@ ol {
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 10px;
-    font-size: 1.1em;
+    font-size: 1.15em;
 }
 
 .formulario_div:hover {
-    background-color: #d1e5f5;
+    background-color: #a8c8ff;
+      border-color: #1558d6;
 }
 
 .input_crear {
     width: 80%;
-    padding: 12px;
+    padding:14px 16px;
     margin-bottom: 18px;
-    border: 2px solid #ccc;
+    border: 2.5px solid #6a9dfc;
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
+     color: #0a2e7e;
+    font-family: inherit;
 }
 
 .input_crear:focus {
-    border-color: #8cb2f5;
+    border-color:  #1558d6;
     outline: none;
 }
 
 .label_crear_modificar {
     font-size: 1.1em;
-    color: #4e92c4;
+    color:#1558d6;
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
@@ -315,13 +328,15 @@ ol {
 
 .seleccion {
     width: 80%;
-    padding: 12px;
+    padding:14px 16px;
     margin-top: 10px;
     border-radius: 8px;
-    border: 2px solid #ccc;
+    border: 2px solid #6a9dfc;
     background-color: white;
     font-size: 16px;
     margin-left: 10%;
+    color: #0a2e7e;
+    font-family: inherit;
 }
 
 #seleccion_crear:focus {

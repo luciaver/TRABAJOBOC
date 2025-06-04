@@ -1,5 +1,5 @@
 body {
-    background-image: url(img/fondo_recu.jpeg);
+    background-image: url(img/fondo.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,12 +8,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
     margin-top: 0px;
     margin-bottom: 20px;
+    font-size: 2em;
+    
 }
+
+p {
+    color: #666;
+    font-size:1.1em; 
+}
+
 
 #formulario {
     margin-top: 10px;
@@ -33,7 +42,7 @@ h2 {
     border-radius: 15px;
     padding-left: 10px;
     border: none;
-    width: 60%;
+    width: 70%;
     margin-top: 20px;
     margin-bottom: 12px;
 }
@@ -41,6 +50,7 @@ h2 {
 label {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
+    color: #333;
 }
 
 input {
