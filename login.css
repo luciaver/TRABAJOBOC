@@ -1,79 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url(img/img_login.jpg);
-    margin: 0;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}   
-
-
-#base-login {
-    background-color: rgba(246, 246, 246, 0.88);
-    width: 30%;
-    min-width: 320px; 
-    border-radius: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-image: url('img/fondooo.jpeg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
-#base-logo {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.formulario-login {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  padding: 5rem;
+  width: 95vw;
+  max-width: 650px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#logo {
-    width: 70%;
+.icono-candado {
+  width: 100px; /* Reduzco el tamaño del icono */
+  height: 100px; /* Reduzco el tamaño del icono */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem; /* Reduzco el margen inferior */
+  border: 3px solid #007bff; /* Reduzco el grosor del borde */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3); /* Reduzco la sombra */
 }
 
-#formulario {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 5px;
-} 
-
-label {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.6em;
+.formulario-login h5 {
+  margin-bottom: 3rem;
+  font-size: 3.2rem;
+  color: #333;
+  font-weight: 700;
 }
 
-.formulario-registros {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.controladores {
+  width: 100%;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  background-color: #f7f7f7;
+  transition: all 0.3s ease;
+  color: #333;
 }
 
-.input-registro {
-    background-color: #d9d9d9;
-    height: 2.1em;
-    border-radius: 15px;
-    padding-left: 10px;
-    border: none;
-    width: 70%;
+.controladores::placeholder {
+  color: #a0a0a0;
 }
 
-#form-submit {
-    border: none;
-    border-radius: 15px;
-    background-color: grey;
-    color: white;
-    width: 30%;
-    height: 2.3em;
-    font-size: 1em;
-    margin-top: 15px;
-    margin-bottom: 15px;
+.controladores:focus {
+  background-color: #e8e8e8;
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3);
 }
 
-#form-submit:hover {
-    background-color: white;
-    color: grey;
-    border: 10px;
+.botones {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.botones:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+.botones:active {
+  transform: translateY(0);
+}
+
+p {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  text-decoration: underline;
+  color: #0056b3;
 }

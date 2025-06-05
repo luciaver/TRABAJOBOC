@@ -1,0 +1,198 @@
+/* 🔄 RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌐 ESTILOS GENERALES */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 🧢 ENCABEZADO */
+.encabezado {
+  background-color: #6c93c0;
+  color: white;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.nombre-usuario {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.horario {
+  font-size: 2rem;
+  text-align: right;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+/* 🧾 CONTENIDO PRINCIPAL */
+.contenido-principal {
+  padding: 7rem 3rem;
+  text-align: center;
+}
+
+.contenido-principal h2 {
+ margin-bottom: 120px; 
+  font-size: 2.5rem;
+  color: #2a4d69;
+}
+
+/* 🧩 GRID DE TARJETAS */
+.grid-bocadillos {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 80px;
+}
+
+/* 🥪 TARJETA */
+.tarjeta-bocadillo {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+   width: 100%; 
+}
+
+.tarjeta-bocadillo:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-bocadillo h3 {
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.imagen-bocadillo {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  object-fit: contain; 
+}
+
+.descripcion-bocadillo {
+  font-size: 4rem;
+  color: #010101;
+  margin-bottom: 1rem;
+}
+
+.tarjeta-bocadillo p {
+  margin-bottom: 0.8rem;
+  font-size: 2.2rem;
+}
+
+.precio {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2a4d69;
+  margin: 1rem 0;
+}
+
+/* ⚠️ ICONOS DE ALÉRGENOS */
+.icono-alergeno {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* 🔘 BOTONES */
+.contenedor-botones {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boton {
+  padding: 1.3rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton-pedir {
+  background-color: #28a745;
+  color: white;
+}
+
+.boton-pedir:hover {
+  background-color: #218838;
+}
+
+.boton-cancelar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.boton-cancelar:hover {
+  background-color: #c82333;
+}
+
+/* 📱 GENERAL RESPONSIVE AJUSTE */
+@media (max-width: 768px) {
+  .encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .contenido-principal {
+    padding: 3rem 1rem;
+  }
+
+  .tarjeta-bocadillo {
+    padding: 1.5rem;
+  }
+
+  .nombre-usuario,
+  .horario {
+    font-size: 1.8rem;
+  }
+
+  .contenido-principal h2 {
+    font-size: 2rem;
+  }
+
+  .tarjeta-bocadillo h3 {
+    font-size: 1.8rem;
+  }
+
+  .descripcion-bocadillo {
+    font-size: 1.3rem;
+  }
+
+  .precio {
+    font-size: 1.5rem;
+  }
+}

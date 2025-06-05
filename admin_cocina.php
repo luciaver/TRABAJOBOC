@@ -2,6 +2,7 @@
 require_once 'conexion.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // CREAR bocadillo
+
     if (isset($_POST['crear'])) {
         $nombreBocadillo = $_POST['nombre'];
         $alergenosBocadillo = $_POST['alergenos'];
@@ -11,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
      $consultaSQL = "INSERT INTO bocadillos (nombre, alergenos, ingredientes, estado, coste)  VALUES (?, ?, ?, ?, ?)";
      $stmt = $pdo->prepare($consultaSQL);
-     $resultado = $stmt->execute([$nombreBocadillo, $alergenosBocadillo, $ingredientesBocadillo, $estadoBocadillo, $costeBocadillo]);
+     $resultado = $stmt->execute([$nombreBocadillo, $alergenosBocadillo, $ingredientesBocadillo, $estadoBocadillo, $costeBocadillo]);  
 
         if ($resultado) {
             echo "Bocadillo creado con éxito.";
@@ -20,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     // MODIFICAR bocadillo
+
     if (isset($_POST['modificar'])) {
         $idBocadillo = $_POST['id'];
         $nombreBocadillo = $_POST['nombre'];
@@ -39,7 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // ELIMINAR bocadillo
+    // ELIMINAR bocadilloo
+
     if (isset($_POST['eliminar'])) {
         $idBocadillo = $_POST['id'];
         $consultaSQL = "DELETE FROM bocadillos WHERE id=$idBocadillo";
@@ -51,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     // SOLICITAR bocadillo
+
     if (isset($_POST['solicitar'])) {
         $nombreAlumno = $_POST['alumno'];
         $nombreBocadilloSolicitado = $_POST['bocadillo'];
