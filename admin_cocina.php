@@ -1,5 +1,6 @@
 <?php
 require_once 'conexion.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // CREAR bocadillo
 
@@ -55,12 +56,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     // SOLICITAR bocadillo
 
-    if (isset($_POST['solicitar'])) {
-        $nombreAlumno = $_POST['alumno'];
-        $nombreBocadilloSolicitado = $_POST['bocadillo'];
-        $estadoBocadillo = $_POST['estado'];
-        
+  if (isset($_POST['solicitar'])) {
+    $nombreAlumno = $_POST['alumno']; 
+    $nombreBocadilloSolicitado = $_POST['bocadillo'];
+    $estadoBocadillo = $_POST['estado'];
+
+    // Buscar precio del bocadillo por el nombre quetiene
+    $stmt = $pdo->prepare("SELECT coste FROM bocadillos WHERE nombre = ?");
+    $stmt->execute([$nombreBocadilloSolicitado]);
+    $fila = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($fila) {
+        $precio = $fila['coste'];
+
+        // Insertar pedido
+        $stmtInsert = $pdo->prepare("INSERT INTO pedidos (nombre_bocadillo, precio, estado, email_alumno) VALUES (?, ?, 'NO RETIRADO', ?)");
+        $resultado = $stmtInsert->execute([$nombreBocadilloSolicitado, $precio, $nombreAlumno]);
+
+        if ($resultado) {
+            echo "✅ Pedido realizado con éxito.";
+        } else {
+            echo "❌ Error al registrar el pedido.";
+        }
+    } else {
+        echo "❌ Bocadillo no encontrado.";
     }
+}
+
 }
         
     
@@ -81,8 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h2 id="nombre_user">Administrador</h2>
         </div>
         <nav>
-            <a href="admin_usuarios.html">Usuarios</a>
-            <a href="admin_cocina.html">Bocatas</a>
+            <a href="admin_cocina.php">Bocatas</a>
         </nav>
         <div id="div_logo">
             <img src="img/login-logo.png" id="img_logo" />
@@ -127,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="section">
             <form method="POST">
                 <h3>Solicitud de bocadillo</h3>
-                <input type="text" name="alumno" placeholder="Nombre del alumno" required />
+            <input type="email" name="alumno" placeholder="Correo del alumno" required />
                 <select name="bocadillo" required>
                     <option value="Tomatito">Tomatito</option>
                     <option value="Tortilla">Tortilla</option>
