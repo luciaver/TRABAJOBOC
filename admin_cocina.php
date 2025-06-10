@@ -24,66 +24,65 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // MODIFICAR bocadillo
 
     if (isset($_POST['modificar'])) {
-        $idBocadillo = $_POST['id'];
         $nombreBocadillo = $_POST['nombre'];
-        $alergenosBocadillo = $_POST['alergenos'];
         $alergenosBocadillo = $_POST['alergenos'];
         $ingredientesBocadillo = $_POST['ingredientes'];
         $estadoBocadillo = $_POST['estado'];
         $costeBocadillo = $_POST['coste'];
-        $consultaSQL = "UPDATE bocadillos SET  nombre='$nombreBocadillo', alergenos='$alergenosBocadillo',ingredientes='$ingredientesBocadillo',
-        estado='$estadoBocadillo', coste=$costeBocadillo 
-         WHERE id=$idBocadillo";
-        $resultado = $pdo->query($consultaSQL);
-        if ($resultado) {
-            echo "Bocadillo modificado con éxito.";
-        } else {
-            echo "Error al modificar bocadillo.";
-        }
+          $consultaSQL = "UPDATE bocadillos SET alergenos = ?, ingredientes = ?, estado = ?, coste = ? WHERE nombre = ?";
+        $stmt = $pdo->prepare($consultaSQL);
+        $resultado = $stmt->execute([$alergenosBocadillo, $ingredientesBocadillo, $estadoBocadillo, $costeBocadillo, $nombreBocadillo]);
+        echo $resultado ? "Bocadillo modificado con éxito." : "Error al modificar bocadillo.";
     }
 
     // ELIMINAR bocadilloo
-
     if (isset($_POST['eliminar'])) {
-        $idBocadillo = $_POST['id'];
-        $consultaSQL = "DELETE FROM bocadillos WHERE id=$idBocadillo";
-        $resultado = $pdo->query($consultaSQL);
-        if ($resultado) {
-            echo "Bocadillo eliminado con éxito.";
-        } else {
-            echo "Error al eliminar bocadillo.";
-        }
+        $nombreBocadillo = $_POST['nombre'];
+        $consultaSQL = "DELETE FROM bocadillos WHERE nombre = ?";
+        $stmt = $pdo->prepare($consultaSQL);
+        $resultado = $stmt->execute([$nombreBocadillo]);
+        echo $resultado ? "✅ Bocadillo eliminado con éxito." : "❌ Error al eliminar bocadillo.";
     }
+    
+
     // SOLICITAR bocadillo
 
-  if (isset($_POST['solicitar'])) {
-    $nombreAlumno = $_POST['alumno']; 
+ if (isset($_POST['solicitar'])) {
+    $nombreAlumno = $_POST['nombre_alumno'];
+    $curso = $_POST['curso'];
     $nombreBocadilloSolicitado = $_POST['bocadillo'];
-    $estadoBocadillo = $_POST['estado'];
 
-    // Buscar precio del bocadillo por el nombre quetiene
-    $stmt = $pdo->prepare("SELECT coste FROM bocadillos WHERE nombre = ?");
-    $stmt->execute([$nombreBocadilloSolicitado]);
-    $fila = $stmt->fetch(PDO::FETCH_ASSOC);
+    // Buscar email del alumno
+    $stmt = $pdo->prepare("SELECT email FROM alumno WHERE nombre = ? AND curso = ?");
+    $stmt->execute([$nombreAlumno, $curso]);
+    $alumno = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($fila) {
-        $precio = $fila['coste'];
+    if ($alumno) {
+        $emailAlumno = $alumno['email'];
 
-        // Insertar pedido
-        $stmtInsert = $pdo->prepare("INSERT INTO pedidos (nombre_bocadillo, precio, estado, email_alumno) VALUES (?, ?, 'NO RETIRADO', ?)");
-        $resultado = $stmtInsert->execute([$nombreBocadilloSolicitado, $precio, $nombreAlumno]);
+        // Buscar precio del bocadillo
+        $stmt = $pdo->prepare("SELECT coste FROM bocadillos WHERE nombre = ?");
+        $stmt->execute([$nombreBocadilloSolicitado]);
+        $bocadillo = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($resultado) {
-            echo "✅ Pedido realizado con éxito.";
+        if ($bocadillo) {
+            $precio = $bocadillo['coste'];
+
+            // Insertar pedido
+            $stmtInsert = $pdo->prepare("INSERT INTO pedidos (nombre_bocadillo, precio, estado, email_alumno) VALUES (?, ?, 'NO RETIRADO', ?)");
+            $resultado = $stmtInsert->execute([$nombreBocadilloSolicitado, $precio, $emailAlumno]);
+
+            echo $resultado ? "✅ Pedido realizado con éxito." : "❌ Error al registrar el pedido.";
         } else {
-            echo "❌ Error al registrar el pedido.";
+            echo "❌ Bocadillo no encontrado.";
         }
     } else {
-        echo "❌ Bocadillo no encontrado.";
+        echo "❌ Alumno no encontrado con ese nombre y curso.";
     }
 }
+   }
 
-}
+
         
     
 
@@ -130,7 +129,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="section">
             <form method="POST">
                 <h3>Modificar bocadillo</h3>
-                <input type="number" name="id" placeholder="ID del bocadillo a modificar" required />
                 <input type="text" name="nombre" placeholder="Nombre" required />
                 <textarea name="alergenos" placeholder="Alérgenos" required></textarea>
                 <textarea name="ingredientes" placeholder="Ingredientes" required></textarea>
@@ -148,7 +146,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="section">
             <form method="POST">
                 <h3>Solicitud de bocadillo</h3>
-            <input type="email" name="alumno" placeholder="Correo del alumno" required />
+            <input type="text" name="nombre_alumno" placeholder="Nombre completo del alumno" required />
+            <select name="curso" required>
+            <option value="1ºESO">1ºESO</option>
+            <option value="2ºESO">2ºESO</option>
+            <option value="3ºESO">3ºESO</option>
+            <option value="4ºESO">4ºESO</option>
+            <option value="Grado Medio 1º año">Grado Medio 1º año</option>
+            <option value="Grado Medio 2º año">Grado Medio 2º año</option>
+        </select>
+
                 <select name="bocadillo" required>
                     <option value="Tomatito">Tomatito</option>
                     <option value="Tortilla">Tortilla</option>
@@ -166,8 +173,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="section">
             <form method="POST">
                 <h3>Eliminar Bocadillo</h3>
-                <input type="number" name="id" placeholder="ID del bocadillo a eliminar" required />
-                <button type="submit" name="eliminar">Eliminar Bocadillo</button>
+                <input type="text" name="nombre" placeholder="Nombre del bocadillo a eliminar" required />
+                 <button type="submit" name="eliminar">Eliminar Bocadillo</button>
             </form>
         </div>
     </section>
