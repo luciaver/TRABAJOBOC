@@ -1,0 +1,182 @@
+/* Clean minimalist style with subtle shadows and no border radius */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #6b7280;
+  margin: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.titulo {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #111827;
+}
+
+.tabla-bocadillos {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.75rem;
+  background: #f9fafb;
+  /* No border-radius */
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  font-size: 16px;
+}
+
+.tabla-bocadillos thead tr {
+  background: #e5e7eb;
+  color: #374151;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  /* No border-radius */
+}
+
+.tabla-bocadillos thead th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+.tabla-bocadillos tbody tr {
+  background: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  /* No border-radius */
+  transition: background-color 0.3s ease;
+}
+
+.tabla-bocadillos tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+.tabla-bocadillos tbody td {
+  padding: 1rem 1.5rem;
+  vertical-align: middle;
+}
+
+.tabla-bocadillos tbody input[type="text"],
+.tabla-bocadillos tbody input[type="number"],
+.tabla-bocadillos tbody select {
+  width: 100%;
+  font-size: 16px;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #d1d5db;
+  /* No border-radius here either */
+  background: #f9fafb;
+  color: #374151;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.tabla-bocadillos tbody input[type="text"]:focus,
+.tabla-bocadillos tbody input[type="number"]:focus,
+.tabla-bocadillos tbody select:focus {
+  outline: none;
+  border-color: #4ade80;
+  background: #ffffff;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn-verde {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* No border-radius */
+}
+
+.btn-verde:hover {
+  background-color: #15803d;
+  transform: scale(1.05);
+}
+
+.btn-rojo {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* No border-radius */
+}
+
+.btn-rojo:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+.mensaje {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.exito {
+  color: #16a34a;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.paginacion {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.paginacion a,
+.paginacion span {
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+  color: #374151;
+  background: #e5e7eb;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+  /* No border-radius */
+}
+
+.paginacion a:hover {
+  background-color: #d1d5db;
+}
+
+.pagina-activa {
+  background-color: #2563eb !important;
+  color: white !important;
+  pointer-events: none;
+  /* No border-radius */
+}
+
+.pagina-disable {
+  opacity: 0.5;
+  pointer-events: none;
+  background: #e5e7eb;
+  padding: 0.5rem 0.8rem;
+  color: #374151;
+  user-select: none;
+  /* No border-radius */
+}
