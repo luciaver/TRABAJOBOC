@@ -29,28 +29,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $ingredientes = $_POST['ingredientes_' . $id];
             $estado = $_POST['estado_' . $id];
             $coste = $_POST['coste_' . $id];
-                        $estado = $_POST['estado_' . $id];
+            $estado = $_POST['estado_' . $id];
             $coste = $_POST['coste_' . $id];
             $upd = $pdo->prepare("UPDATE bocadillos SET nombre=?, alergenos=?, ingredientes=?, estado=?, coste=? WHERE id=?");
-            if ($upd->execute([$nombre, $alergenos, $ingredientes, $estado, $coste, $id])) {
-                echo "<p class='mensaje exito'>Bocadillo modificado.</p>";
-                header("Refresh:1; url=?pagina=$pagina_actual");
-                exit;
-            } else {
-                echo "<p class='mensaje error'>Error al modificar.</p>";
-            }
-        }
-        if (isset($_POST['eliminar'])) {
-            $del = $pdo->prepare("DELETE FROM bocadillos WHERE id=?");
-            if ($del->execute([$id])) {
-                echo "<p class='mensaje exito'>Bocadillo eliminado.</p>";
-                header("Refresh:1; url=?pagina=$pagina_actual");
-                exit;
-            } else {
-                echo "<p class='mensaje error'>Error al eliminar.</p>";
-            }
+        if ($upd->execute([$nombre, $alergenos, $ingredientes, $estado, $coste, $id])) {
+            $mensaje = "<p class='mensaje exito'>Bocadillo modificado.</p>";
+        } else {
+            $mensaje = "<p class='mensaje error'>Error al modificar.</p>";
         }
     }
+         if (isset($_POST['eliminar'])) {
+        $id = (int)$_POST['eliminar'];
+        $del = $pdo->prepare("DELETE FROM bocadillos WHERE id=?");
+        if ($del->execute([$id])) {
+            $mensaje = "<p class='mensaje exito'>Bocadillo eliminado.</p>";
+        } else {
+            $mensaje = "<p class='mensaje error'>Error al eliminar.</p>";
+        }
+    }
+}
 }
 ?>
 
