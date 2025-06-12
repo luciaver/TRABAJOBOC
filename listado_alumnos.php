@@ -79,11 +79,11 @@ $bocadillos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <a href="admin_cocina.php" class="btn-crear-bocadillo">➕ Añadir Bocadillos</a>
 </div>
 
-        <?php if ($mensaje): ?>
+        <?php if ($mensaje){ ?>
             <div class="mensaje-container">
                 <?= $mensaje ?>
             </div>
-        <?php endif; ?>
+        <?php } ?>
         <form method="post" novalidate>
             <table class="tabla-bocadillos" aria-label="Lista de bocadillos con opciones">
                 <thead>
@@ -102,7 +102,7 @@ $bocadillos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <tr>
                             <td data-label="ID"><?=($b['id']) ?></td>
                             <td data-label="Nombre"><input type="text" name="nombre_<?= $b['id'] ?>" value="<?= ($b['nombre']) ?>" required></td>
-                            <td data-label="Coste (€)"><input type="number" step="0.01" name="coste_<?= $b['id'] ?>" value="<?= ($b['coste']) ?>" required></td>
+                            <td data-label="Coste (€)"><input type="number" name="coste_<?= $b['id'] ?>" value="<?= ($b['coste']) ?>" required></td>
                             <td data-label="Estado">
                                 <select name="estado_<?= $b['id'] ?>" required>
                                     <option value="Caliente" <?= $b['estado'] === 'Caliente' ? 'selected' : '' ?>>Caliente</option>
