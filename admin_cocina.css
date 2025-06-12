@@ -4,48 +4,34 @@
 }
 
 body {
-    background-color: white;
+    background-color: #f0f4f8;
     padding: 0;
     margin: 0;
     height: 100vh;  
+    font-family: 'Comfortaa', sans-serif; 
 }
 
 header {
     background-color: #87a7c4;
     height: 100px;
     display: flex;
+    align-items: center; 
 }
 
 #div_user {
     width: 25%;
-    height: 100%;
-    display: flex;
     text-align: center;
-}
-
-#imagen_user {
-    height: 100%;
-    border-radius: 100%;
 }
 
 #nombre_user {
-    margin-top: auto;
-    margin-bottom: auto;
     margin-left: 2%;
     color: white;
+    font-size: 1.5em;
 }
 
 nav {
-    font-family: 'comfortaa';
     width: 45%;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-#div_horario {
-    width: 15%;
-    font-family: 'comfortaa';
 }
 
 .ul_nav {
@@ -59,17 +45,12 @@ nav {
 a {
     text-decoration: none;
     color: white;
-     font-size: 1.5em; 
-    margin:120px;
+    font-size: 1.5em; 
+    margin: 0 20px;
 }
 
-a:hover{
+a:hover {
     color: blue;
-}
-
-#logo {
-    width: 20%;
-    background-color: blue;
 }
 
 #div_logo {
@@ -82,44 +63,27 @@ a:hover{
     height: 100px;
 }
 
-@media (max-width: 920px){
-    #div_logo {
-        width: 0%;
-        display: none;
-    }
-
-    #div_horario {
-        width: 22%;
-        font-size: 1.2em;
-    }
-
-    nav {
-        width: 58%;
-    }
-}
-
 .container {
     display: flex;
     gap: 30px;
     background-color: #ffffff;
-    padding: 100px;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-   justify-content: center;
+    margin: 20px auto;
+    justify-content: center;
 }
 
 .section {
-    
     min-width: 300px;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background-color: #f8f8f8;
-   width:45%;
+    width: 45%;
 }
 
 .section h3 {
@@ -128,21 +92,14 @@ a:hover{
     text-align: center;
 }
 
-label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-   
-}
-
 input, select, textarea, button {
     width: 100%;
-    padding:3px;
+    padding: 10px; /* Aumentar padding para mayor comodidad */
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    justify-content: center;
+    box-sizing: border-box; /* Asegurar que el padding no afecte el ancho total */
 }
 
 button {
@@ -152,6 +109,7 @@ button {
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    transition: background-color 0.3s; 
 }
 
 button:hover {
@@ -162,11 +120,12 @@ textarea {
     resize: none;
     height: 60px;
 }
+
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
         width: 100%;
-        padding:10px;
+        padding: 10px;
     }
 }
 

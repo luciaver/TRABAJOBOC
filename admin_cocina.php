@@ -21,30 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Error al crear bocadillo.";
         }
     }
-    // MODIFICAR bocadillo
-
-    if (isset($_POST['modificar'])) {
-        $nombreBocadillo = $_POST['nombre'];
-        $alergenosBocadillo = $_POST['alergenos'];
-        $ingredientesBocadillo = $_POST['ingredientes'];
-        $estadoBocadillo = $_POST['estado'];
-        $costeBocadillo = $_POST['coste'];
-          $consultaSQL = "UPDATE bocadillos SET alergenos = ?, ingredientes = ?, estado = ?, coste = ? WHERE nombre = ?";
-        $stmt = $pdo->prepare($consultaSQL);
-        $resultado = $stmt->execute([$alergenosBocadillo, $ingredientesBocadillo, $estadoBocadillo, $costeBocadillo, $nombreBocadillo]);
-        echo $resultado ? "Bocadillo modificado con éxito." : "Error al modificar bocadillo.";
-    }
-
-    // ELIMINAR bocadilloo
-    if (isset($_POST['eliminar'])) {
-        $nombreBocadillo = $_POST['nombre'];
-        $consultaSQL = "DELETE FROM bocadillos WHERE nombre = ?";
-        $stmt = $pdo->prepare($consultaSQL);
-        $resultado = $stmt->execute([$nombreBocadillo]);
-        echo $resultado ? "✅ Bocadillo eliminado con éxito." : "❌ Error al eliminar bocadillo.";
-    }
+ 
     
-
     // SOLICITAR bocadillo
 
  if (isset($_POST['solicitar'])) {
@@ -125,23 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         </div>
 
-        <!-- MODIFICAR BOCADILLO -->
-        <div class="section">
-            <form method="POST">
-                <h3>Modificar bocadillo</h3>
-                <input type="text" name="nombre" placeholder="Nombre" required />
-                <textarea name="alergenos" placeholder="Alérgenos" required></textarea>
-                <textarea name="ingredientes" placeholder="Ingredientes" required></textarea>
-                <select name="estado" required>
-                    <option value="caliente">Caliente</option>
-                    <option value="frio">Frío</option>
-                </select>
-                <input type="number" name="coste" placeholder="coste" step="0.01" required />
-                <button type="submit" name="modificar">Modificar bocadillo</button>
-            </form>
-        </div>
-
-
         <!-- SOLICITAR BOCADILLO -->
         <div class="section">
             <form method="POST">
@@ -167,14 +128,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <option value="Caliente">Caliente</option>
                 </select>
                 <button type="submit" name="solicitar">Solicitar bocadillo</button>
-            </form>
-        </div>
-        <!-- ELIMINAR BOCADILLO -->
-        <div class="section">
-            <form method="POST">
-                <h3>Eliminar Bocadillo</h3>
-                <input type="text" name="nombre" placeholder="Nombre del bocadillo a eliminar" required />
-                 <button type="submit" name="eliminar">Eliminar Bocadillo</button>
             </form>
         </div>
     </section>
