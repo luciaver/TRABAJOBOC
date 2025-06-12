@@ -1,29 +1,28 @@
 <?php
 require_once 'conexion.php';
-// Configuración
+
 $bocadillos_por_pagina = 5;
 $pagina_actual = isset($_GET['pagina']) && is_numeric($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 if ($pagina_actual < 1) $pagina_actual = 1;
 $offset = ($pagina_actual - 1) * $bocadillos_por_pagina;
 
-// Inicializar mensaje
+
 $mensaje = '';
 
-// Procesar formulario
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'] ?? null;
     if ($id) {
-        // Validar que el id sea numérico para seguridad
+     
         $id = (int)$id;
         if (isset($_POST['modificar'])) {
-            // Recoger y sanitizar datos
             $nombre = trim($_POST['nombre_' . $id]);
             $alergenos = trim($_POST['alergenos_' . $id]);
             $ingredientes = trim($_POST['ingredientes_' . $id]);
             $estado = $_POST['estado_' . $id];
             $coste = $_POST['coste_' . $id];
 
-            // Validaciones simples
+    
             if ($nombre === '' || !is_numeric($coste) || ($estado !== 'Caliente' && $estado !== 'Frío')) {
                 $mensaje = "<p class='mensaje error'>Datos inválidos para modificar el bocadillo.</p>";
             } else {
@@ -48,11 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Obtener total y páginas después de posible modificación para mostrar datos actualizados
+
 $total_bocadillos = $pdo->query("SELECT COUNT(*) FROM bocadillos")->fetchColumn();
 $total_paginas = ceil($total_bocadillos / $bocadillos_por_pagina);
 
-// Obtener bocadillos de la página actual
+
 $sql = "SELECT id, nombre, coste, estado, alergenos, ingredientes 
         FROM bocadillos ORDER BY id ASC 
         LIMIT :limit OFFSET :offset";
@@ -101,17 +100,17 @@ $bocadillos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <tbody>
                     <?php foreach ($bocadillos as $b) { ?>
                         <tr>
-                            <td data-label="ID"><?= htmlspecialchars($b['id']) ?></td>
-                            <td data-label="Nombre"><input type="text" name="nombre_<?= $b['id'] ?>" value="<?= htmlspecialchars($b['nombre']) ?>" required></td>
-                            <td data-label="Coste (€)"><input type="number" step="0.01" name="coste_<?= $b['id'] ?>" value="<?= htmlspecialchars($b['coste']) ?>" required></td>
+                            <td data-label="ID"><?=($b['id']) ?></td>
+                            <td data-label="Nombre"><input type="text" name="nombre_<?= $b['id'] ?>" value="<?= ($b['nombre']) ?>" required></td>
+                            <td data-label="Coste (€)"><input type="number" step="0.01" name="coste_<?= $b['id'] ?>" value="<?= ($b['coste']) ?>" required></td>
                             <td data-label="Estado">
                                 <select name="estado_<?= $b['id'] ?>" required>
                                     <option value="Caliente" <?= $b['estado'] === 'Caliente' ? 'selected' : '' ?>>Caliente</option>
                                     <option value="Frío" <?= $b['estado'] === 'Frío' ? 'selected' : '' ?>>Frío</option>
                                 </select>
                             </td>
-                            <td data-label="Alérgenos"><input type="text" name="alergenos_<?= $b['id'] ?>" value="<?= htmlspecialchars($b['alergenos']) ?>"></td>
-                            <td data-label="Ingredientes"><input type="text" name="ingredientes_<?= $b['id'] ?>" value="<?= htmlspecialchars($b['ingredientes']) ?>"></td>
+                            <td data-label="Alérgenos"><input type="text" name="alergenos_<?= $b['id'] ?>" value="<?= ($b['alergenos']) ?>"></td>
+                            <td data-label="Ingredientes"><input type="text" name="ingredientes_<?= $b['id'] ?>" value="<?= ($b['ingredientes']) ?>"></td>
                             <td class="acciones" data-label="Acciones">
                                 <button type="submit" name="modificar" value="1" class="btn-verde" onclick="document.querySelector('input[name=id]').value='<?= $b['id']?>'">Modificar</button>
                                 <button type="submit" name="eliminar" value="1" class="btn-rojo" onclick="if(confirm('¿Eliminar este bocadillo?')) { document.querySelector('input[name=id]').value='<?= $b['id']?>'; return true; } else { return false; }">Eliminar</button>
@@ -120,7 +119,7 @@ $bocadillos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <?php } ?>
                 </tbody>
             </table>
-            <!-- Campo id oculto para enviar el id correcto al backend -->
+          
             <input type="hidden" name="id" value="" />
         </form>
         <nav class="paginacion" aria-label="Paginación bocadillos">
