@@ -75,17 +75,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Administrador</title>
 </head>
 <body>
-    <header>
-        <div id="div_user">
-            <h2 id="nombre_user">Administrador</h2>
-        </div>
-        <nav>
-            <a href="admin_cocina.php">Bocatas</a>
-        </nav>
-        <div id="div_logo">
-            <img src="img/login-logo.png" id="img_logo" />
-        </div>
-    </header>
+  <header>
+    <div id="div_user">
+        <h2 id="nombre_user">Administrador</h2>
+    </div>
+    <div id="div_logo">
+        <img src="img/login-logo.png" id="img_logo" alt="Logo El Campico" />
+    </div>
+</header>
+
     <section class="container">
         <!-- CREAR BOCADILLO -->
         <div class="section">

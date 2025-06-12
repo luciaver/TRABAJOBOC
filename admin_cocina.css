@@ -15,16 +15,22 @@ header {
     background-color: #87a7c4;
     height: 100px;
     display: flex;
-    align-items: center; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
+
 #div_user {
-    width: 25%;
-    text-align: center;
+     display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
 }
 
 #nombre_user {
-    margin-left: 2%;
+    margin:0;
     color: white;
     font-size: 1.5em;
 }
@@ -54,13 +60,14 @@ a:hover {
 }
 
 #div_logo {
-    width: 40%;
+   flex: 1;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 #img_logo {
-    height: 100px;
+    height: 80px;
 }
 
 .container {
